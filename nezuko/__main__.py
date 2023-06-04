@@ -67,7 +67,7 @@ async def start_bot():
             bot_modules += "|{:<15}".format(i)
         j += 1
     print("+===============================================================+")
-    print("|                              Nezuko                           |")
+    print("|                          Suzume Iwato                         |")
     print("+===============+===============+===============+===============+")
     print(bot_modules)
     print("+===============+===============+===============+===============+")
@@ -104,11 +104,11 @@ home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="Commands ❓", callback_data="bot_commands"
+                text="Help 💬", callback_data="bot_commands"
             ),
             InlineKeyboardButton(
-                text="Repo ❤️",
-                url="https://github.com/rozari0/NezukoBot",
+                text="Support Chat📢",
+                url="https://telegram.dog/SuzumeSupport",
             ),
         ],
         [
@@ -137,12 +137,12 @@ keyboard = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="Help ❓",
+                text="Help 💬",
                 url=f"t.me/{BOT_USERNAME}?start=help",
             ),
             InlineKeyboardButton(
-                text="Repo 🛠",
-                url="https://github.com/rozari0/NezukoBot",
+                text="Support Chat📢",
+                url="https://telegram.dog/SuzumeSupport",
             ),
         ],
         [
@@ -159,7 +159,7 @@ keyboard = InlineKeyboardMarkup(
 async def start(_, message):
     if message.chat.type != enums.ChatType.PRIVATE:
         return await message.reply_photo(
-            photo="https://cdn.awwni.me/2gj9h.jpg",
+            photo="https://graph.org//file/295c737bd34b074a5b654.jpg",
             caption="Pm Me For More Details.",
             reply_markup=keyboard,
         )
@@ -184,7 +184,7 @@ async def start(_, message):
             )
     else:
         await message.reply_photo(
-            photo="https://cdn.awwni.me/2gj9h.jpg",
+            photo="https://graph.org//file/bbc581e739c4233e03448.jpg",
             caption=home_text_pm,
             reply_markup=home_keyboard_pm,
         )
@@ -290,9 +290,9 @@ async def help_button(client, query):
 Hello {query.from_user.first_name}, My name is {BOT_NAME}.
 I'm a group management bot with some usefule features.
 You can choose an option below, by clicking a button.
-Also you can ask anything in Support Group.
+Also you can ask your queries in Support Group.
 
-General command are:
+General commands are hereby notified:
  - /start: Start the bot
  - /help: Give this message
  """
